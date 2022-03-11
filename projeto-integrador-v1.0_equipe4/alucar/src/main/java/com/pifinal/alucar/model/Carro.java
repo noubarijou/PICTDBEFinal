@@ -32,7 +32,7 @@ public class Carro implements Serializable {
     private int qtde_assento;
 
     @Column(nullable = false)
-    private int ar_condicionado;
+    private boolean ar_condicionado;
 
     @Column(nullable = false)
     private int qtde_porta;
@@ -41,7 +41,7 @@ public class Carro implements Serializable {
     private String tipo_combustivel;
 
     @Column(nullable = false)
-    private int cambio;
+    private String cambio;
 
     @Column(nullable = false)
     private String motor;

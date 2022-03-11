@@ -42,7 +42,7 @@ public class Usuario implements Serializable {
     private String telefone;
 
     @OneToMany(mappedBy = "usuario")
-    @JoinColumn(name = "endereco_id")
+    //@JoinColumn(name = "endereco_id")
     private Set<Endereco> endereco = new HashSet<>();
 
     @OneToMany(mappedBy = "usuario")

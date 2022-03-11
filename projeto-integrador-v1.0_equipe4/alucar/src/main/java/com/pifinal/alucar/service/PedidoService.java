@@ -2,6 +2,7 @@ package com.pifinal.alucar.service;
 
 import com.pifinal.alucar.model.Pedido;
 import com.pifinal.alucar.repository.PedidoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,10 +11,11 @@ import java.util.Optional;
 @Service
 public class PedidoService {
 
+    @Autowired
     private PedidoRepository pedidoRepository;
 
     public Pedido cadastrar (Pedido p) {
-        return pedidoRepository.cadastrar(p);
+        return pedidoRepository.save(p);
     }
 
     public List<Pedido> buscarTodos() {return pedidoRepository.findAll();}

@@ -20,7 +20,7 @@ public class PedidoController {
     private PedidoService pedidoService;
 
     @PostMapping
-    public ResponseEntity<Pedido> Cadastrar (@RequestBody Pedido pedido) {
+    public ResponseEntity<Pedido> cadastrar (@RequestBody Pedido pedido) {
         return ResponseEntity.ok(pedidoService.cadastrar(pedido));
     }
 
@@ -32,7 +32,7 @@ public class PedidoController {
         return ResponseEntity.ok(pedidoService.buscar(id));
     }
 
-    @PutMapping
+    @PutMapping()
     public ResponseEntity<Pedido> atualizar(@RequestBody Pedido pedido) {
         ResponseEntity<Pedido> response = null;
         if (pedido.getId() != null && pedidoService.buscar(pedido.getId()).isPresent())
