@@ -29,32 +29,15 @@ public class Carro implements Serializable {
     private String url_imagem;
 
     @Column(nullable = false)
-    private int qtde_assento;
-
-    @Column(nullable = false)
-    private boolean ar_condicionado;
-
-    @Column(nullable = false)
-    private int qtde_porta;
-
-    @Column(nullable = false)
-    private String tipo_combustivel;
-
-    @Column(nullable = false)
-    private String cambio;
-
-    @Column(nullable = false)
-    private String motor;
-
-    @Column(nullable = false)
-    private String cor;
-
-    @Column(nullable = false)
     private int unid_disponiveis;
 
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "caracteristicas_id")
+    private Caracteristicas caracteristicas;
 
     @OneToOne
     @JoinColumn(name = "pedido_id")
