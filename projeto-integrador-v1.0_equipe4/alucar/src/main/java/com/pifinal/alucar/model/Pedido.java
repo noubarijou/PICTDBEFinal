@@ -49,4 +49,8 @@ public class Pedido implements Serializable {
     @JoinColumn(name = "carro_id")
     private Carro carro;
 
+    @OneToMany
+    @JoinColumn(name = "cidades_id")
+    private Cidades cidades;
+
 }
