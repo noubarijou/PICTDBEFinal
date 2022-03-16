@@ -26,14 +26,15 @@ public class Carro implements Serializable {
     private double valor;
 
     @Column(nullable = false)
-    private String url_imagem;
-
-    @Column(nullable = false)
     private int unid_disponiveis;
 
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "imagens_id")
+    private Imagens imagens;
 
     @ManyToOne
     @JoinColumn(name = "caracteristicas_id")
