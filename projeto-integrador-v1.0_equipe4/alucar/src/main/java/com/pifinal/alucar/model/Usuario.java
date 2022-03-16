@@ -46,7 +46,13 @@ public class Usuario implements Serializable {
     private Set<Endereco> endereco = new HashSet<>();
 
     @OneToMany(mappedBy = "usuario")
+    @JoinColumn (name = "funcoes_id")
+    private Set<Funcoes> funcoes = new HashSet<>();
+
+    @OneToMany(mappedBy = "usuario")
     @JsonIgnoreProperties("usuario_id")
     @ToString.Exclude
     private Set<Pedido> pedido = new HashSet<>();
+
+
 }
