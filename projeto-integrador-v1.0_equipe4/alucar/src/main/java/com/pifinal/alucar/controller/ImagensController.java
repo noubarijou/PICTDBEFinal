@@ -31,15 +31,15 @@ public class ImagensController {
         return ResponseEntity.ok(imagensService.buscar(id));
     }
 
-    @PutMapping()
-    public ResponseEntity<Imagens> atualizar(RequestBody Imagens imagens) {
-        ResponseEntity<Imagens> response = null;
-        if (imagens.getId() != null && imagensService.buscar(imagens.getId()).isPresent())
-            response = ResponseEntity.ok(imagensService.atualizar(imagens));
-        else
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        return response;
-    }
+    //@PutMapping()
+    //public ResponseEntity<Imagens> atualizar(RequestBody Imagens imagens) {
+      //  ResponseEntity<Imagens> response = null;
+        //if (imagens.getId() != null && imagensService.buscar(imagens.getId()).isPresent())
+         //   response = ResponseEntity.ok(imagensService.atualizar(imagens));
+        //else
+          //  response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        //return response;
+    //}
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> excluir (@PathVariable Integer id) {
