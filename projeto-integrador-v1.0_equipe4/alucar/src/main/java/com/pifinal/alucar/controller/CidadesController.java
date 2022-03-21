@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/cidades")
-@CrossOrigin(origins = "*",allowedHeaders = " ")
+@CrossOrigin(origins = "*",allowedHeaders = "*")
 public class CidadesController {
 
     @Autowired

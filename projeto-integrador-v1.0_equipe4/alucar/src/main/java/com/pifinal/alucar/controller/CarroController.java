@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/produto")
-@CrossOrigin(origins = "*", allowedHeaders = " ")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 
 public class CarroController {
 

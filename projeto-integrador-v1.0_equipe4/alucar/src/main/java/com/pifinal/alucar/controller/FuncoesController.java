@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/funcoes")
-@CrossOrigin(origins = "*", allowedHeaders = " ")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class FuncoesController {
 
     @Autowired
